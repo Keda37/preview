@@ -1,4 +1,4 @@
-jQuery(".wrapper").mousemove(
+jQuery(".wrapper-bg").mousemove(
     function(e){
       
       var offset = jQuery(this).offset();
