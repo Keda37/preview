@@ -10,8 +10,10 @@ jQuery(".wrapper").mousemove(
 
       jQuery(this).children('img').each(
         function(){
-          var diffX = jQuery('#Parallax').width() - jQuery(this).width();
-          var diffY = jQuery('#Parallax').height() - jQuery(this).height();
+          var diffX = jQuery('#').width() - jQuery(this).width();
+          console.log(jQuery('#').width());
+          console.log(diffX);
+          var diffY = jQuery('#').height() - jQuery(this).height();
 
           var myX = diffX * (mouseXPercent / 1500);
 
@@ -19,8 +21,8 @@ jQuery(".wrapper").mousemove(
 
 
           var cssObj = {
-            'left': myX + 'px',
-            'top': myY + 'px'
+            'left': myX + '%',
+            'top': myY + '%'
           }
           
           jQuery(this).animate({left: myX, top: myY},{duration: 50, queue: false, easing: 'linear'});
